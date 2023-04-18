@@ -1,8 +1,3 @@
-
-<?php
-//include 'db.php'; 
-?>
-
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	<div class="container">
@@ -41,10 +36,8 @@
 			</ul>
 			
 			<ul class="nav navbar-nav navbar-right">
-			<!-- If the value of the 'role' key is 'Administrator', a link to the 
-			'admin/index.php' page with the label 'Admin' 
-			will be displayed. Otherwise, a link to the 'admin/profile.php' 
-			page with the label 'Admin' will be displayed. -->
+<!-- If the value of the 'role' key is 'Administrator', a link to the 'admin/index.php' page with the label 'Admin' 
+will be displayed. Otherwise, a link to the 'admin/profile.php' page with the label 'Admin' will be displayed. -->
 			<?php if(isset($_SESSION['role'])):?>
 				<?php if($_SESSION['role'] == 'Administrator'):?>	
 					<li><a href="admin/index.php">Admin</a></li>

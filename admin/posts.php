@@ -1,9 +1,8 @@
 <?php 
 include "../common.php";
 include 'admin_includes/admin_header.php';
-
+include 'form.php';
 ?>
-
 <body>
 	<div id="wrapper">
 	<?php include 'admin_includes/admin_nav.php';?>
@@ -29,23 +28,8 @@ if(isset($_GET['source'])) {
 } else {
 	$source = "";
 }
-	
-switch($source) {
-	case 'add_post':
-		include 'admin_includes/admin_add_post.php';
-		break;
-	case 'edit_post':
-		include 'admin_includes/admin_edit_post.php';
-		break;
-	case 'Archieve_Post':
-		
-		echo "Hello Rushi bhau";
-		include 'admin_includes/domo.php';
-		break;
-	default:
-		include 'admin_includes/admin_view_all_posts.php';
-}
-										
+ $s=new switch_ch();
+ $s->checki($source);
 ?>	
 
 <?php include 'admin_includes/admin_footer.php';?>

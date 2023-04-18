@@ -133,7 +133,7 @@ if(empty($_SESSION['userid'])):?>
 
     $query=$check_page->check_admin_add();
 		
-
+        $connection=mysqli_connect('localhost','root','','cms');
 		$posts = mysqli_query($connection, $query);
 		?>
 		<?php foreach($posts as $post):?>

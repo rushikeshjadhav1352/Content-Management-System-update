@@ -47,6 +47,11 @@ $result = mysqli_query($connection, $query);
 $num_comments = mysqli_fetch_array($result)[0];
 
 ?>
+
+
+
+
+
 <form>
 	<div class="row">	<!-- ------------- 1st row --------------------- -->
 		<div class="col-md-6">
@@ -125,22 +130,7 @@ $num_comments = mysqli_fetch_array($result)[0];
 					<div class="well well-sm">
 					<?php date_default_timezone_set("Asia/Kolkata"); ?>
 						<?php echo date('M. j, Y, g:i a', strtotime($user['user_date']));?>
-					</div>
-
-
-
-				</div>
-
-
-
-			</div>
-
-
-		</div>
-		
-		
-
-	</div>		
+					</div></div></div></div></div>		
 	
 	
 
@@ -153,5 +143,7 @@ $num_comments = mysqli_fetch_array($result)[0];
 		<i class="fa fa-eye"></i> View All Users</a>
 	<?php endif;?>
 </form>
+
+?>
 <?php endif;?>		<!-- only 'Administrator' can use this page -->
 <?php include 'admin_includes/admin_footer.php';?>

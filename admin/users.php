@@ -1,5 +1,6 @@
 <?php include 'admin_includes/admin_header.php';?>
-
+<?php include 'form.php'; ?>
+ 
 <body>
 	<div id="wrapper">
 	<?php include 'admin_includes/admin_nav.php';?>
@@ -26,19 +27,8 @@ if(isset($_GET['source'])) {
 	$source = "";
 }
 	
-switch($source) {
-	case 'add_user':
-		include 'admin_includes/admin_add_user.php';
-		break;
-	case 'edit_user':
-		include 'admin_includes/admin_edit_user.php';
-		break;
-	case 'c':
-		echo 'c';
-		break;
-	default:
-		include 'admin_includes/admin_view_all_users.php';
-}
+$swit=new switch_ch();
+$swit->select_task($source);
 										
 ?>	
 

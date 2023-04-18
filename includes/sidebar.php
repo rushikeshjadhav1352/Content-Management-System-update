@@ -1,13 +1,9 @@
-<!-- Blog Sidebar Widgets Column -->
 <div class="col-md-4">
-
-	<!-- Login Well -------------------------------------------------- -->
+<!-- Login Well -------------------------------------------------- -->
 	<div class="well">
 		<!-- //checks if the 'userid' key in the $_SESSION superglobal array is empty -->
 		<?php if(empty($_SESSION['userid'])):?>
 		<h4>Login Page</h4>
-		
-
 		<!-- form which perfro -->
 		<!-- The form is set to submit the data to the "includes/login.php" 
 		file using the POST method. -->

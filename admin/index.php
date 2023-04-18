@@ -21,7 +21,7 @@
 	<a href="../index.php" class="btn btn-primary add-del-btn">Home</a>
 	<a href="posts.php?source=" class="btn btn-primary add-del-btn">View Posts</a>
 	<a href="profile.php" class="btn btn-primary add-del-btn">Profile</a>
-	<a href="../includes/logout.php" class="btn btn-primary add-del-btn">Log Out</a>
+	<a href="../includes/logout.php" class="btn btn-primary add-del-btn">Log Out</a> 
 <?php else:?>
 
 <!-- --------------------------------------------------------------- -->
@@ -190,29 +190,10 @@ $mydata = [	'Total Posts' => $num_posts,
 		
 foreach($mydata as $key => $value) {
 	echo "['" . $key . "', " . $value . "],";
-}
-?>
-/*******************************************/
-
-    ]);
-
-    // var options = {
-    //   chart: {
-    //     title: '<?php //echo SITENAME;?> Snapshot',
-    //     subtitle: '',
-    //   }
-    // };
-
-    // var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
-
-    // chart.draw(data, options);
-  }
-</script>
+}?>]);</script>
 
 <div id="columnchart_material" style="width:auto; height:500px;"></div>
-
-<!-- --------------------------------------------------------------- -->
-<?php endif;?>		<!-- only 'Administrator' can use this page -->
+<?php endif;?>		
   </body>
 
 <?php include 'admin_includes/admin_footer.php';?>

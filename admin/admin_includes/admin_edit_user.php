@@ -4,6 +4,8 @@
 		// get all input data
 		$user_id = $_POST['user_id'];
 		$user_uname = $_POST['user_uname'];
+		$connection=mysqli_connect('localhost','root','','cms');
+
 		
 		$user_email				= mysqli_real_escape_string($connection, $_POST['user_email']);
 		$user_email_val		    = filter_var($user_email, FILTER_VALIDATE_EMAIL);		
@@ -62,6 +64,8 @@
 <?php 
 	// ---------- if there is a user to be edited from $_GET -------------
 	if(isset($_GET['id'])) {
+		$connection=mysqli_connect('localhost','root','','cms');
+
 
 		$edit_user_id = mysqli_real_escape_string($connection, $_GET['id']);
 		

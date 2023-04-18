@@ -1,6 +1,7 @@
 <?php
 	// -------------- if 'Update Post' button is pressed -----------------
 	if(isset($_POST['updatepostsubmit'])) {
+        $connection=mysqli_connect('localhost','root','','cms');
 
 		$update_post_id = $_POST['post_id'];
 		$author = mysqli_real_escape_string($connection, $_POST['post_author']);
@@ -45,6 +46,8 @@
 		$edit_post_id = $_GET['id'];
 		
 		$query = "SELECT * FROM cms_posts WHERE post_id = $edit_post_id";
+		$connection=mysqli_connect('localhost','root','','cms');
+
 		$result = mysqli_query($connection, $query);
 		$edit_post = mysqli_fetch_array($result);
 		

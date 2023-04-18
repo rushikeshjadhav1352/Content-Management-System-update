@@ -101,3 +101,46 @@ $query = "select SELECT cms_users.user_uname from cms_users
 return $query;
 }
 ?>
+
+
+<?php
+class switch_ch{
+	function checki($source){
+
+		switch($source) {
+			case 'add_post':
+				include 'admin_includes/admin_add_post.php';
+				break;
+			case 'edit_post':
+				include 'admin_includes/admin_edit_post.php';
+				break;
+			case 'Archieve_Post':
+				
+				echo "Hello Rushi bhau";
+				include 'admin_includes/domo.php';
+				break;
+			default:
+				include 'admin_includes/admin_view_all_posts.php';
+		}
+
+	}
+
+	function select_task($source){
+	switch($source) {
+		case 'add_user':
+			include 'admin_includes/admin_add_user.php';
+			break;
+		case 'edit_user':
+			include 'admin_includes/admin_edit_user.php';
+			break;
+		default:
+			include 'admin_includes/admin_view_all_users.php';
+	}
+}
+
+
+
+}
+
+
+?>

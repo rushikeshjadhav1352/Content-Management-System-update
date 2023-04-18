@@ -10,7 +10,9 @@
 <?php
 	// if delete button is pressed (only an admin can do this)
 	if(isset($_GET['del'])) {
-		if($_SESSION['role'] == 'Administrator') {		
+		if($_SESSION['role'] == 'Administrator') {	
+			$connection=mysqli_connect('localhost','root','','cms');
+	
 			$uid = mysqli_real_escape_string($connection, $_GET['del']);
 		
 			$query = "delete from cms_users where user_id = $uid";
@@ -27,6 +29,8 @@
 <?php
 	// if admin or subscriber button is pressed
 	if(isset($_GET['role'])) {
+		$connection=mysqli_connect('localhost','root','','cms');
+
 		$new_role = mysqli_real_escape_string($connection, $_GET['role']);
 		$uid = $_GET['id'];
 	
@@ -85,6 +89,7 @@
 						GROUP BY cms_users.user_id),0) AS user_comments
 					FROM cms_users
 					ORDER BY cms_users.user_date DESC";
+                  $connection=mysqli_connect('localhost','root','','cms');
 
 		$users = mysqli_query($connection, $query);
 	?>
